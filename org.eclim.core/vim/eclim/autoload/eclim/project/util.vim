@@ -1033,6 +1033,7 @@ function! eclim#project#util#GetProjects() " {{{
       let results = eclim#Execute(
         \ s:command_projects, {'instance': instance})
       if type(results) != g:LIST_TYPE
+        unlet results
         continue
       endif
 
